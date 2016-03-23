@@ -51,7 +51,6 @@ module.exports = {
       return result.data
     } catch (e) {
       sails.log.error(e);
-      throw e
     }
   },
 
@@ -125,4 +124,11 @@ module.exports = {
     }
   },
 
+  formate: (data) => {
+    try {
+      
+    } catch (e) {
+      sails.log.error(e);
+    }
+  }
 }

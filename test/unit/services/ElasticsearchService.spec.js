@@ -35,6 +35,34 @@ describe('about Elasticsearch Service .', function() {
     });
   });
 
+  describe('formate', () => {
+
+    it('test formate', async (done) => {
+      try {
+        let data =[{
+          "_index": "trademuch",
+          "_type": "post",
+          "_id": "AVOhcKkoBv-U6beQq8xD",
+          "_score": 0.70273256,
+          "_source": {
+            "id": 4,
+            "title": "二手iphone",
+            "location": {
+              "lat": 80.1,
+              "lon": 100
+            }
+          }
+        }];
+        let result =  ElasticsearchService.formate(data);
+        console.log(result);
+        done();
+      } catch (e) {
+        sails.log.error(e);
+        done(e);
+      }
+    });
+  });
+
   describe('test add place', () => {
 
     // let testUser,place;
